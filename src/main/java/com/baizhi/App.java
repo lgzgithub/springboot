@@ -10,5 +10,6 @@ public class App {
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
         System.out.println("I m a boy");
+        System.out.println("I m a new boy");
     }
 }
