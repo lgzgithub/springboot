@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <title>Title</title>
+    <style>
+        .a{
+           border: 2px solid #f0f0f0;
+           text-align: center;
+        }
+        p.thick{
+            font-weight: bold
+        }
+        .divcss5{
+            border:1px solid  #f0f0f0; width:1000px;
+            margin:0 auto;
+        }
+        .navbar {
+            min-height:30px ;
+        }
+        .b{
+            margin: 20px auto;
+        }
+        .c{
+            min-height:10px ;
+        }
+        .fengye{
+            margin-left:800px;
+        }
+
+    </style>
+</head>
+<body>
+   <!-- <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>-->
+   <!--<p class="navbar-text">Signed in as Mark Otto</p>-->
+   <nav class="navbar navbar-default c">
+       <div class="container-fluid">
+           <!-- Brand and toggle get grouped for better mobile display -->
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">后台管理系统</a>
+           </div>
+           <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse b" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+                   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                   <span class="caret"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                   <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                   <span class="caret"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                   <span class="caret"></span>
+               </ul>
+           </div><!-- /.navbar-collapse -->
+       </div><!-- /.container-fluid -->
+   </nav>
+
+   <div class="col-sm-2">
+  <button type="button" class="btn btn-default" aria-label="Left Align">
+       <span class="" aria-hidden="true"><input type="text" name="name"/></span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+   </button><br/>
+       <button type="button" class="btn btn-default" aria-label="Left Align">
+           <span class="" aria-hidden="true">用户管理</span>
+       </button><br/>
+       <button type="button" class="btn btn-default" aria-label="Left Align">
+           <span class="" aria-hidden="true">商品管理</span>
+       </button><br/>
+       <button type="button" class="btn btn-default" aria-label="Left Align">
+           <span class="" aria-hidden="true">订单管理</span>
+       </button><br/>
+   </div><br/><br/><br/><br/>
+       <h1><p class="thick">客户信息</p></h1>
+   <hr width="1000px"/>
+       <div class="col-lg-pull-0 container row=6 a">
+          客户姓名<input type="text" class="img-rounded"/>&nbsp;&nbsp;&nbsp;&nbsp;
+           客户来源<select class="img-rounded">
+                       <option>--请选择-</option>
+                       <option></option>
+                       <option></option>
+                   </select>&nbsp;&nbsp;&nbsp;&nbsp;
+           所属行业<select class="img-rounded">
+           <option>--请选择-</option>
+           <option></option>
+           <option></option>
+       </select>
+           客户级别
+           <select class="img-rounded">
+           <option>--请选择-</option>
+           <option></option>
+           <option></option>
+       </select>
+               <div class="btn btn-success" role="group" aria-label="...">
+                   <button type="button" class="btn btn-default">查询</button>
+               </div>
+       </div><br/>
+
+   <div class="container row=6 a">
+       <div>
+           <div class="container row=6">
+               <nav class="navbar navbar-default">
+                   <div class="container-fluid">
+                       <div class="navbar-header">
+                           客户信息列表
+                       </div>
+                   </div>
+               </nav>
+           <table class="table table-bordered table-striped">
+               <tr>
+                   <td>ID</td>
+                   <td>姓名</td>
+                   <td>来源</td>
+                   <td>行业</td>
+                   <td>级别</td>
+               </tr>
+               <tr>
+                   <td>1</td>
+                   <td>张三</td>
+                   <td>智能</td>
+                   <td>IT</td>
+                   <td>高级开发师</td>
+               </tr>
+               <tr>
+                   <td>2</td>
+                   <td>张三</td>
+                   <td>智能</td>
+                   <td>IT</td>
+                   <td>高级开发师</td>
+               </tr>
+               <tr>
+                   <td>3</td>
+                   <td>张三</td>
+                   <td>智能</td>
+                   <td>IT</td>
+                   <td>高级开发师</td>
+               </tr>
+           </table>
+           </div>
+       </div>
+   </div>
+   <div class="col-lg-5  pull-right fengye">
+   <nav aria-label="Page navigation">
+       <ul class="pagination">
+           <li>
+               <a href="#" aria-label="Previous">
+                   <span aria-hidden="true">&laquo;</span>
+               </a>
+           </li>
+           <li><a href="#">1</a></li>
+           <li><a href="#">2</a></li>
+           <li><a href="#">3</a></li>
+           <li><a href="#">4</a></li>
+           <li><a href="#">5</a></li>
+           <li>
+               <a href="#" aria-label="Next">
+                   <span aria-hidden="true">&raquo;</span>
+               </a>
+           </li>
+       </ul>
+   </nav>
+   </div>
+</body>
+</html>

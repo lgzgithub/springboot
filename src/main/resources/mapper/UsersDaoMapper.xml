@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- namespace:接口的全限定名 -->
+<mapper namespace="com.baizhi.dao.UsersDao">
+    <!--添加缓存-->
+    <cache type="com.baizhi.cache.RedisCache"/>
+    <!-- 查所有 -->
+    <select id="selectAll" resultType="users">
+        select * from users
+    </select>
+    <!--添加-->
+    <insert id="insert" parameterType="users">
+        insert into users values(#{id},#{name},#{password},#{birthday},#{phone},#{status})
+    </insert>
+    <!-- 删除 -->
+    <delete id="delete" parameterType="java.lang.String">
+        delete from users where id = #{id}
+    </delete>
+    <!--修改-->
+    <update id="update" parameterType="users">
+        update users set name=#{name},password=#{password},birthday=#{birthday},phone=#{phone},status=#{status}
+        where id=#{id}
+    </update>
+    <!--模糊查-->
+    <select id="selectLikeByUsers" parameterType="users" resultType="users">
+         select id, name, password, birthday, phone, status from users
+         <where>
+             <if test="name!=null">
+                 name like concat('%',#{name},'%')
+             </if>
+             <if test="phone!=null">
+                 and phone like concat('%',#{phone},'%')
+             </if>
+             <if test="status!=null">
+                 and status = #{status}
+             </if>
+         </where>
+    </select>
+    <!--根据iD查-->
+    <select id="selectById"  resultType="users">
+          select * from users where id=#{id}
+    </select>
+    <!--分页查-->
+    <select id="selectByPage" resultType="users">
+        select * from users limit #{start},#{rows}
+    </select>
+    <!--总页数-->
+    <select id="queryCount" resultType="java.lang.Integer">
+        select count(id) from users
+    </select>
+</mapper>
